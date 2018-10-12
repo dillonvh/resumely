@@ -4,7 +4,7 @@ import Question from './question.js';
 class Builder extends Component {
   render() {
     return (
-      <div className="Builder">
+      <div id="Builder" style={{ 'padding-top': '5%'}}>
         This is where the builder goes.
         Here are some questions:
         <ul>

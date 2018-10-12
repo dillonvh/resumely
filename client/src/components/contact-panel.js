@@ -5,7 +5,6 @@ class ContactPanel extends Component {
     return (
       <div className="ContactPanel">
         This is the contact panel.
-        <hr />
       </div>
     );
   }

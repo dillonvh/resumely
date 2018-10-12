@@ -5,7 +5,6 @@ class AboutPanel extends Component {
     return (
       <div className="AboutPanel">
         This is the about panel.
-        <hr />
       </div>
     );
   }
