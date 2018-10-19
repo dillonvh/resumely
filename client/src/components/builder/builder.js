@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-import Question from './question.js';
+import QuestionsContainer from './questions-container.js';
+
 
 class Builder extends Component {
+  constructor() {
+    super();
+    this.endQuestionaire = this.endQuestionaire.bind(this);
+  }
+
+  endQuestionaire() {
+
+  }
+
   render() {
     return (
-      <div id="Builder" style={{ 'padding-top': '5%'}}>
+      <div id="Builder" style={{ 'paddingTop': '5%'}}>
         This is where the builder goes.
         Here are some questions:
-        <ul>
-            <li>
-                <Question />
-            </li>
-            <li>
-                <Question />
-            </li>
-
-            <li>
-                <Question />
-            </li>
-        </ul>
+        <QuestionsContainer endQuestionaire={this.endQuestionaire}/>
       </div>
     );
   }
