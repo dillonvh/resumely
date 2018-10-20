@@ -1,24 +1,31 @@
 import React from 'react';
 
-const headerLink = {
-  'cursor': 'pointer',
-  'float': 'right',
-  'padding-right': '5%',
+const headerStyle = {
+  background: 'white',
+  paddingTop: '1%',
+  position: 'fixed',
+  width: '100%',
+};
+
+const headerLinkStyle = {
+  cursor: 'pointer',
+  float: 'right',
+  paddingRight: '5%',
 };
 
 const Header = ({ toggleAbout, toggleContact }) => {
   return (
-    <div className="Header" style={{ 'padding-top': '1%', position: 'fixed', 'width': '100%', 'background': 'white' }}>
-      <span style={{ float: 'left', 'padding-left': '5%' }}>
+    <div id="Header" style={headerStyle}>
+      <span style={{ float: 'left', paddingLeft: '5%' }}>
         Resumely
       </span>
-      <span style={headerLink} onClick={toggleAbout}>
+      <span onClick={toggleAbout} style={headerLinkStyle}>
         About
       </span>
-      <span style={headerLink} onClick={toggleContact}>
+      <span onClick={toggleContact} style={headerLinkStyle}>
         Contact
       </span>
-      <div style={{ float: 'center', 'padding-top': '2%' }}>
+      <div style={{ float: 'center', paddingTop: '2%' }}>
         <hr />
       </div>
     </div>

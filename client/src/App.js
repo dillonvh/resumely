@@ -7,13 +7,13 @@ import './App.css';
 
 const panelStyle = {
   'position': 'fixed',
-  'top': '10%',
   'right': '2%',
+  'top': '10%',
 };
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       isAboutOpen: false,
       isContactOpen: false,
@@ -23,17 +23,26 @@ class App extends Component {
   }
 
   toggleAbout() {
-    this.setState((prevState) => ({ isAboutOpen: !prevState.isAboutOpen, isContactOpen: false }));
+    this.setState((prevState) => ({
+      isAboutOpen: !prevState.isAboutOpen,
+      isContactOpen: false,
+    }));
   }
   
   toggleContact() {
-    this.setState((prevState) => ({ isContactOpen: !prevState.isContactOpen, isAboutOpen: false }));
+    this.setState((prevState) => ({
+      isContactOpen: !prevState.isContactOpen,
+      isAboutOpen: false,
+    }));
   }
 
   render() {
     return (
-      <div className="App">
-        <Header toggleAbout={this.toggleAbout} toggleContact={this.toggleContact} />
+      <div id="App">
+        <Header
+          toggleAbout={this.toggleAbout}
+          toggleContact={this.toggleContact}
+        />
         <div style={panelStyle}>
           {this.state.isAboutOpen ? <AboutPanel /> : null}
           {this.state.isContactOpen ? <ContactPanel /> : null}        

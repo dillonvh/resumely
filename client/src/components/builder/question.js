@@ -8,9 +8,12 @@ const questionStyle = {
 class Question extends Component {
   render() {
     return (
-      <div className="Question" style={questionStyle}>
+      <div id="Question" style={questionStyle}>
         This is an individual question.
-        <button onClick={() => this.props.scroll(this.props.index)}>Scroll</button>
+        <br />
+        <button onClick={() => this.props.scroll(this.props.index)}>
+          Scroll
+        </button>
       </div>
     );
   }

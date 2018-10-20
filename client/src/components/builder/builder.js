@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import QuestionsContainer from './questions-container.js';
 
-
 class Builder extends Component {
   constructor() {
     super();
@@ -14,7 +13,7 @@ class Builder extends Component {
 
   render() {
     return (
-      <div id="Builder" style={{ 'paddingTop': '5%'}}>
+      <div id="Builder" style={{ paddingTop: '5%'}}>
         This is where the builder goes.
         Here are some questions:
         <QuestionsContainer endQuestionaire={this.endQuestionaire}/>
