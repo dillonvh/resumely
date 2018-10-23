@@ -1,14 +1,56 @@
 import React, { Component } from 'react';
 import Question from './question.js';
 
+const itemStyle = {
+  fontSize: '2em',
+  padding: '30%',
+};
+
 class QuestionsContainer extends Component {
-  constructor() {
-    super();
-    this.elementsList = [];    
-    this.scroll = this.scroll.bind(this);
+  constructor(props) {
+    super(props);
     this.state = {
-      questions: this.getQuestions(),
+      items: this.props.isQuestionaire
+        ? this.getQuestions()
+        : this.getOptions(),
     };
+  }
+
+  // FIXME : should probably store this somewhere else
+  // in fact, im probably going to have to change how this component works
+  // a bit and instead use the question component for the options too
+  getOptions() {
+    let options = [];
+    options.push(<div className="Option" key={0} style={itemStyle}>
+        What is your seniority level?
+        <br />
+        <select onChange={event => {this.seniority = event.target.value}}>
+          <option value="associate">Associate</option>
+          <option value="junior">Junior</option>
+          <option value="senior">Senior</option>
+        </select>
+        <br />
+        <button onClick={() => this.props.scroll(0)}>
+          Scroll
+        </button>
+      </div>
+    );
+    options.push(<div className="Option" key={1} style={itemStyle}>
+        What kind of job are you applying for?
+        <br />
+        <select onChange={event => {this.jobType = event.target.value}}>
+          <option value="engineering">Engineering</option>
+          <option value="management">Management</option>
+          <option value="UX">UX</option>
+          <option value="design">Design</option>          
+        </select>
+        <br />
+        <button onClick={() => this.props.scroll(1)}>
+          Scroll
+        </button>
+      </div>
+    );
+    return options;
   }
 
   // TODO: fill in with questions from template stored elsewhere
@@ -16,28 +58,26 @@ class QuestionsContainer extends Component {
   getQuestions() {
     let questions = [];
     for (let i = 0; i < 3; i++) {
-      questions.push(<Question index={i} key={i} scroll={this.scroll} />);
+      questions.push(
+        <Question
+          index={i}
+          itemStyle={itemStyle}
+          key={i}
+          scroll={this.props.scroll}
+        />
+      );
     }
     return questions;
-  }
-
-  scroll(index) {
-    if (index < this.elementsList.length - 1) {
-      this.elementsList[index + 1].scrollIntoView({ behavior: 'smooth' });
-    } else {
-      this.props.endQuestionaire();
-    }
   }
 
   render() {
     return (
       <div id="QuestionsContainer">
-        This is the questions list:
-        {this.state.questions.map(question => {
+        {this.state.items.map(item => {
             return (
-              <div key={question.key}>
-                <div ref={el => { this.elementsList.push(el); }}>
-                  {question}
+              <div key={item.key}>
+                <div ref={el => { this.props.elementsList.push(el); }}>
+                  {item}
                 </div>
               </div>
             );

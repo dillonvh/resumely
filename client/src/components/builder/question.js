@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 
-const questionStyle = {
-  fontSize: '2em',
-  padding: '30%',
-};
-
 class Question extends Component {
   render() {
     return (
-      <div id="Question" style={questionStyle}>
+      <div id="Question" style={this.props.itemStyle}>
         This is an individual question.
         <br />
         <button onClick={() => this.props.scroll(this.props.index)}>
