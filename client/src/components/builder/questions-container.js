@@ -10,7 +10,7 @@ class QuestionsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: this.props.isQuestionaire
+      items: this.props.isQuestionnaire
         ? this.getQuestions()
         : this.getOptions(),
     };
@@ -24,7 +24,7 @@ class QuestionsContainer extends Component {
     options.push(<div className="Option" key={0} style={itemStyle}>
         What is your seniority level?
         <br />
-        <select onChange={event => {this.seniority = event.target.value}}>
+        <select>
           <option value="associate">Associate</option>
           <option value="junior">Junior</option>
           <option value="senior">Senior</option>
@@ -38,7 +38,7 @@ class QuestionsContainer extends Component {
     options.push(<div className="Option" key={1} style={itemStyle}>
         What kind of job are you applying for?
         <br />
-        <select onChange={event => {this.jobType = event.target.value}}>
+        <select>
           <option value="engineering">Engineering</option>
           <option value="management">Management</option>
           <option value="UX">UX</option>

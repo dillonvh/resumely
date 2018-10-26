@@ -11,37 +11,37 @@ class Builder extends Component {
     this.state = {
       isStartOpen: true,
       isOptionsOpen: false,
-      isQuestionaireOpen: false,
+      isQuestionnaireOpen: false,
       isResultsOpen: false,
     };
 
     this.scroll = this.scroll.bind(this);
     this.startToOptions = this.startToOptions.bind(this);
-    this.optionsToQuestionaire = this.optionsToQuestionaire.bind(this);
-    this.questionaireToResults = this.questionaireToResults.bind(this);
+    this.optionsToQuestionnaire = this.optionsToQuestionnaire.bind(this);
+    this.questionnaireToResults = this.questionnaireToResults.bind(this);
   }
 
   startToOptions() {
     this.setState(() => ({isStartOpen: false, isOptionsOpen: true }));
   }
 
-  optionsToQuestionaire() {
+  optionsToQuestionnaire() {
     this.elementsList = [];
-    this.setState(() => ({isOptionsOpen: false, isQuestionaireOpen: true }));
+    this.setState(() => ({isOptionsOpen: false, isQuestionnaireOpen: true }));
   }
 
-  questionaireToResults() {
-    this.setState(() => ({isQuestionaireOpen: false, isResultsOpen: true}));
+  questionnaireToResults() {
+    this.setState(() => ({isQuestionnaireOpen: false, isResultsOpen: true}));
   }
 
   scroll(index) {
     if (index < this.elementsList.length - 1) {
       this.elementsList[index + 1].scrollIntoView({ behavior: 'smooth' });
     } else if (this.state.isOptionsOpen) {
-      this.optionsToQuestionaire();
+      this.optionsToQuestionnaire();
       this.topDiv.scrollIntoView();      
     } else {
-      this.questionaireToResults();
+      this.questionnaireToResults();
     }
   }
 
@@ -56,15 +56,15 @@ class Builder extends Component {
         {this.state.isOptionsOpen
           ? <QuestionsContainer
               elementsList={this.elementsList}
-              isQuestionaire={false}              
+              isQuestionnaire={false}
               scroll={this.scroll}
             />
           : null
         }
-        {this.state.isQuestionaireOpen
+        {this.state.isQuestionnaireOpen
           ? <QuestionsContainer
               elementsList={this.elementsList}
-              isQuestionaire
+              isQuestionnaire
               scroll={this.scroll}
             />
           : null

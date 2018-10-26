@@ -5,7 +5,7 @@ const StartView = ({ start }) => {
     <div id="StartView">
       This is the start screen.
       <br />
-      Click to start the questionaire:
+      Click to start the questionnaire:
       <br />
       <button onClick={start}>Start</button>
     </div>

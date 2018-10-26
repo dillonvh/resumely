@@ -17,6 +17,10 @@ class App extends Component {
       isAboutOpen: false,
       isContactOpen: false,
     };
+    this.contentOptions = {
+      about: "about",
+      contact: "contact",
+    }
     this.toggleAbout = this.toggleAbout.bind(this);
     this.toggleContact = this.toggleContact.bind(this);
   }
@@ -43,8 +47,14 @@ class App extends Component {
           toggleContact={this.toggleContact}
         />
         <div style={panelStyle}>
-          {this.state.isAboutOpen ? <InfoPanel isContact={false} /> : null}
-          {this.state.isContactOpen ? <InfoPanel isContact /> : null}        
+          {this.state.isAboutOpen
+            ? <InfoPanel contentOptions={this.contentOptions.about} />
+            : null
+          }
+          {this.state.isContactOpen
+            ? <InfoPanel contentOptions={this.contentOptions.contact} />
+            : null
+          }        
         </div>
         <Builder />
       </div>

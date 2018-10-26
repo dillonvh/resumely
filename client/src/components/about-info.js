@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
-class AboutPanel extends Component {
+class AboutInfo extends Component {
   render() {
     return (
       <div className="static-modal">
@@ -23,4 +23,4 @@ class AboutPanel extends Component {
   }
 }
 
-export default AboutPanel;
+export default AboutInfo;
