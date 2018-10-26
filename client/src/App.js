@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/header.js';
 import Builder from './components/builder/builder.js';
-import AboutPanel from './components/about-panel.js';
-import ContactPanel from './components/contact-panel.js';
+import InfoPanel from './components/info-panel.js';
 import './App.css';
 
 const panelStyle = {
@@ -44,8 +43,8 @@ class App extends Component {
           toggleContact={this.toggleContact}
         />
         <div style={panelStyle}>
-          {this.state.isAboutOpen ? <AboutPanel /> : null}
-          {this.state.isContactOpen ? <ContactPanel /> : null}        
+          {this.state.isAboutOpen ? <InfoPanel isContact={false} /> : null}
+          {this.state.isContactOpen ? <InfoPanel isContact /> : null}        
         </div>
         <Builder />
       </div>
