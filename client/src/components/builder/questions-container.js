@@ -9,6 +9,7 @@ const itemStyle = {
 class QuestionsContainer extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       items: this.props.isQuestionnaire
         ? this.getQuestions()
@@ -60,7 +61,7 @@ class QuestionsContainer extends Component {
     for (let i = 0; i < 3; i++) {
       questions.push(
         <Question
-          index={i}
+          index={i}       
           itemStyle={itemStyle}
           key={i}
           scroll={this.props.scroll}
@@ -71,19 +72,20 @@ class QuestionsContainer extends Component {
   }
 
   render() {
-    return (
+    let elements = [];
+    let jsx = (
       <div id="QuestionsContainer">
         {this.state.items.map(item => {
-            return (
-              <div key={item.key}>
-                <div ref={el => { this.props.elementsList.push(el); }}>
-                  {item}
-                </div>
+          return <div key={item.key}>
+              <div ref={el => { elements.push(el); }}>
+                {item}
               </div>
-            );
+            </div>;
         })}
       </div>
     );
+    this.props.updateElementsList(elements);
+    return(jsx);
   }
 }
 

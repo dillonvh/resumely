@@ -7,7 +7,7 @@ class Question extends Component {
         This is an individual question.
         <br />
         <input type="text" />
-        <button onClick={() => this.props.scroll(this.props.index)}>
+        <button onClick={() => {this.props.scroll(this.props.index)}}>
           Scroll
         </button>
       </div>

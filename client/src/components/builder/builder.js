@@ -4,83 +4,65 @@ import StartView from './start-view.js';
 import ResultsView from './results-view.js';
 import JobPostingInput from './job-posting-input.js';
 
+const NUM_SCREENS = 3;
+
 class Builder extends Component {
   constructor() {
     super();
 
-    this.elementsList = [];    
-    this.state = {
-      isStartOpen: true,
-      isOptionsOpen: false,
-      isJobPostingOpen: false,      
-      isQuestionnaireOpen: false,
-      isResultsOpen: false,
-    };
+    this.elementsList = [];
 
+    this.screenCount = 0;
+    this.switchScreen = this.switchScreen.bind(this);
     this.scroll = this.scroll.bind(this);
-    this.startToOptions = this.startToOptions.bind(this);
-    this.optionsToJobPosting = this.optionsToJobPosting.bind(this);
-    this.jobPostingToQuestionnaire = this.jobPostingToQuestionnaire.bind(this);
-    this.questionnaireToResults = this.questionnaireToResults.bind(this);
+    this.updateElementsList = this.updateElementsList.bind(this);    
+    
+    this.screenComponents = [
+      <StartView start={this.switchScreen} />,
+      <QuestionsContainer
+        isQuestionnaire={false}
+        scroll={this.scroll}
+        updateElementsList={this.updateElementsList}        
+      />,
+      <JobPostingInput end={this.switchScreen}/>,
+      <QuestionsContainer
+        isQuestionnaire
+        scroll={this.scroll}
+        updateElementsList={this.updateElementsList}        
+      />,
+      <ResultsView />,
+    ];
+
+    this.state = {
+      screenComponent: this.screenComponents[0],
+    };
   }
 
-  startToOptions() {
-    this.setState(() => ({isStartOpen: false, isOptionsOpen: true }));
-  }
-
-  optionsToJobPosting() {
-    this.elementsList = [];
-    this.setState(() => ({isOptionsOpen: false, isJobPostingOpen: true }));
-  }
-
-  jobPostingToQuestionnaire() {
-    this.elementsList = [];
-    this.setState(() => ({isJobPostingOpen: false, isQuestionnaireOpen: true }));
-  }
-
-  questionnaireToResults() {
-    this.setState(() => ({isQuestionnaireOpen: false, isResultsOpen: true}));
+  switchScreen() {
+    if (this.screenCount > NUM_SCREENS) return;
+    ++this.screenCount;
+    this.setState(() => ({
+      screenComponent: this.screenComponents[this.screenCount],
+    }));
   }
 
   scroll(index) {
     if (index < this.elementsList.length - 1) {
       this.elementsList[index + 1].scrollIntoView({ behavior: 'smooth' });
-    } else if (this.state.isOptionsOpen) {
-      this.optionsToJobPosting();   
     } else {
-      this.questionnaireToResults();
+      this.switchScreen();
     }
+  }
+
+  updateElementsList(elements) {
+    this.elementsList = elements;
   }
 
   render() {
     return (
       <div id="Builder" style={{ paddingTop: '5%'}}>
         <div ref={el => (this.topDiv = el)} />
-        {this.state.isStartOpen
-          ? <StartView start={this.startToOptions} />
-          : null
-        }
-        {this.state.isOptionsOpen
-          ? <QuestionsContainer
-              elementsList={this.elementsList}
-              isQuestionnaire={false}
-              scroll={this.scroll}
-            />
-          : null
-        }
-        {this.state.isJobPostingOpen
-          ? <JobPostingInput end={this.jobPostingToQuestionnaire}/>
-          : null
-        }
-        {this.state.isQuestionnaireOpen
-          ? <QuestionsContainer
-              elementsList={this.elementsList}
-              isQuestionnaire
-              scroll={this.scroll}
-            />
-          : null
-        }
-        {this.state.isResultsOpen ? <ResultsView /> : null}
+        {this.state.screenComponent}
       </div>
     );
   }
