@@ -19,9 +19,10 @@ class InfoPanel extends Component {
       },
     };
   }
+
   render() {
     return (
-      <div className="static-modal">
+    <div className="static-modal">
       <Modal.Dialog>
         <Modal.Header>
           <Modal.Title>
