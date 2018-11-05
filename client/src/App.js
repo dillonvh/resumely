@@ -1,25 +1,62 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Header from './components/header.js';
+import Builder from './components/builder/builder.js';
+import InfoPanel from './components/info-panel.js';
 import './App.css';
 
+const panelStyle = {
+  'position': 'fixed',
+  'right': '2%',
+  'top': '10%',
+};
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isAboutOpen: false,
+      isContactOpen: false,
+    };
+    this.contentOptions = {
+      about: 'about',
+      contact: 'contact',
+    }
+    this.toggleAbout = this.toggleAbout.bind(this);
+    this.toggleContact = this.toggleContact.bind(this);
+  }
+
+  toggleAbout() {
+    this.setState((prevState) => ({
+      isAboutOpen: !prevState.isAboutOpen,
+      isContactOpen: false,
+    }));
+  }
+  
+  toggleContact() {
+    this.setState((prevState) => ({
+      isContactOpen: !prevState.isContactOpen,
+      isAboutOpen: false,
+    }));
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div id="App">
+        <Header
+          toggleAbout={this.toggleAbout}
+          toggleContact={this.toggleContact}
+        />
+        <div style={panelStyle}>
+          {this.state.isAboutOpen
+            ? <InfoPanel contentOption={this.contentOptions.about} />
+            : null
+          }
+          {this.state.isContactOpen
+            ? <InfoPanel contentOption={this.contentOptions.contact} />
+            : null
+          }        
+        </div>
+        <Builder />
       </div>
     );
   }

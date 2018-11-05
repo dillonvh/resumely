@@ -1,0 +1,92 @@
+import React, { Component } from 'react';
+import Question from './question.js';
+
+const itemStyle = {
+  fontSize: '2em',
+  padding: '30%',
+};
+
+class QuestionsContainer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      items: this.props.isQuestionnaire
+        ? this.getQuestions()
+        : this.getOptions(),
+    };
+  }
+
+  // FIXME : should probably store this somewhere else
+  // in fact, im probably going to have to change how this component works
+  // a bit and instead use the question component for the options too
+  getOptions() {
+    let options = [];
+    options.push(<div className="Option" key={0} style={itemStyle}>
+        What is your seniority level?
+        <br />
+        <select>
+          <option value="associate">Associate</option>
+          <option value="junior">Junior</option>
+          <option value="senior">Senior</option>
+        </select>
+        <br />
+        <button onClick={() => this.props.scroll(0)}>
+          Scroll
+        </button>
+      </div>
+    );
+    options.push(<div className="Option" key={1} style={itemStyle}>
+        What kind of job are you applying for?
+        <br />
+        <select>
+          <option value="engineering">Engineering</option>
+          <option value="management">Management</option>
+          <option value="UX">UX</option>
+          <option value="design">Design</option>          
+        </select>
+        <br />
+        <button onClick={() => this.props.scroll(1)}>
+          Scroll
+        </button>
+      </div>
+    );
+    return options;
+  }
+
+  // TODO: fill in with questions from template stored elsewhere
+  // and change key prop to question id
+  getQuestions() {
+    let questions = [];
+    for (let i = 0; i < 3; i++) {
+      questions.push(
+        <Question
+          index={i}       
+          itemStyle={itemStyle}
+          key={i}
+          scroll={this.props.scroll}
+        />
+      );
+    }
+    return questions;
+  }
+
+  render() {
+    let elements = [];
+    let jsx = (
+      <div id="QuestionsContainer">
+        {this.state.items.map(item => {
+          return <div key={item.key}>
+              <div ref={el => { elements.push(el); }}>
+                {item}
+              </div>
+            </div>;
+        })}
+      </div>
+    );
+    this.props.updateElementsList(elements);
+    return(jsx);
+  }
+}
+
+export default QuestionsContainer;
