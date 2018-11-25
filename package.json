@@ -1,0 +1,11 @@
+{
+  "name": "resumely",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "git@github.com:MariaVolpe/resumely.git",
+  "author": "<ashianagi00@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
