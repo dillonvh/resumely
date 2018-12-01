@@ -1,0 +1,110 @@
+{
+  "contact": {
+    "phone": "(222) 222-2222",
+    "email": "helloworld@samplesite",
+    "linkedin": "linkedin.com/in/sampleuser",
+    "portfolio": "github.com/sampleuser",
+    "websites": [
+      "helloworld.ly"
+    ]
+  },
+  "education": {
+    "schools": [
+      {
+        "name": "Hunter College",
+        "location": "New York, NY",
+        "startDate": "Sept 2017",
+        "endDate": "May 2019",
+        "gpa": "3.5",
+        "major": "Computer Science",
+        "minor": "Underwater Basket Weaving",
+        "activities": [
+          {
+            "name": "",
+            "position": {
+              "positionTitle": "Vice President",
+              "responsibilities": [
+                "Organize club meetings",
+                "Assume responsibilities of club president should the president die"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "City College",
+        "location": "New York, NY",
+        "startDate": "September 2015",
+        "endDate": "May 2017",
+        "gpa": "3.3",
+        "major": "Computer Science",
+        "minor": "None",
+        "activities": [
+          {
+            "name": "Club Penguin",
+            "position": {
+              "positionTitle": "member",
+              "responsibilities": []
+            }
+          }
+        ]
+      }
+    ],
+    "coursework": [
+      "Data Structures and Algorithms",
+      "Orangutan Training",      
+      "Advanced Shoe-Tying",
+      "Divination",
+      "Gregorian Chanting"
+    ]
+  }, // end education
+  "awards": [
+    {
+      "name": "Muse Scholar",
+      "dateAwarded": "September 2015",
+      "description": ["Awarded scholarship for exceptional students in the Arts."]
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "JavaScript"],
+    "frameworks": ["React.js"],
+    "libraries": ["Beautiful Soup", "Pandas"],
+    "tools": ["Git", "PostGreSQL"],
+    "platforms": ["Linux", "iOS"],
+    "other": ["", ""]
+  },
+  "projects": [
+    {
+      "name": "Elevator Simulator",
+      "numUsers": "400+",
+      "description": [
+        "ASCII art based simulation of being an elevator operator",
+        "Player can type floor numbers to visit the corresponding floor",
+        "Elevator will visit floors using an algorithm to efficiently detect where to stop and in what order"
+      ]
+    }
+  ],
+  "openSource": {
+    "name": "isOdd",
+    "numPulls": "3",
+    "description": ["popular NPM module"]
+  },
+  "experience": [
+    {
+      "company": "Organutan Inc.",
+      "location": "New York, NY",
+      "positions": [
+        {
+          "positionTitle": "Full-Stack Intern",
+          "seniority": "Internship",
+          "startDate": "May 2018",
+          "endDate": "July 2018",
+          "responsibilities": [
+            "Fixing typoes in documentation",
+            "Making coffee for management"
+          ]
+        }
+      ]
+    }
+  ]
+}
