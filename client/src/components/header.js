@@ -13,11 +13,18 @@ const headerLinkStyle = {
   paddingRight: '5%',
 };
 
+const titleStyle = {
+  color: '#eac6ff',
+  fontFamily : 'Fugaz One',
+  float: 'left',
+  paddingLeft: '5%', 
+};
+
 const Header = ({ toggleAbout, toggleContact }) => {
   return (
       <div id="Header" style={headerStyle}>
-        <span style={{ float: 'left', paddingLeft: '5%' }}>
-        Resumely
+        <span style={titleStyle}>
+        Resumly
         </span>
         <span onClick={toggleAbout} style={headerLinkStyle}>
         About
