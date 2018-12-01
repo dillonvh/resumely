@@ -1,0 +1,75 @@
+{
+  "contact": {
+    "phone": "",
+    "email": "",
+    "linkedin": "",
+    "portfolio": "",
+    "website": [
+      "",
+      ""
+    ]
+  },
+  "education": {
+    "schools": [
+      {
+        "name": "",
+        "location": "",
+        "startDate": "",
+        "endDate": "",
+        "gpa": "",
+        "major": "",
+        "minor": "",
+        "activities": [
+          {
+            "name": "",
+            "position": {
+              "responsibilities": [ "", "", "" ]
+            }
+          }
+        ]
+      }
+    ],
+    "coursework": ["", ""]
+  }, // end education
+  "awards": [
+    {
+      "name": "",
+      "dateAwarded": "",
+      "description": [""]
+    }
+  ],
+  "skills": {
+    "languages": ["", ""],
+    "frameworks": ["", ""],
+    "libraries": ["", ""],
+    "tools": ["", ""],
+    "platforms": ["", ""],
+    "other": ["", ""]
+  },
+  "projects": [
+    {
+      "name": "",
+      "numUsers": "",
+      "description": [""]
+    }
+  ],
+  "openSource": {
+    "name": "",
+    "numPulls": "",
+    "description": ["", ""]
+  },
+  "experience": [
+    {
+      "company": "",
+      "positions": [
+        {
+          "positionTitle": "",
+          "seniority": "",
+          "startDate": "",
+          "endDate": "",
+          "responsibilities": ["", ""]
+        }
+      ]
+    }
+  ]
+}
