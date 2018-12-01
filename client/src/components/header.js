@@ -15,18 +15,20 @@ const headerLinkStyle = {
 
 const Header = ({ toggleAbout, toggleContact }) => {
   return (
-    <div id="Header" style={headerStyle}>
-      <span style={{ float: 'left', paddingLeft: '5%' }}>
+    <div className="container">
+      <div id="Header" style={headerStyle}>
+        <span style={{ float: 'left', paddingLeft: '5%' }}>
         Resumely
-      </span>
-      <span onClick={toggleAbout} style={headerLinkStyle}>
+        </span>
+        <span onClick={toggleAbout} style={headerLinkStyle}>
         About
-      </span>
-      <span onClick={toggleContact} style={headerLinkStyle}>
+        </span>
+        <span onClick={toggleContact} style={headerLinkStyle}>
         Contact
-      </span>
-      <div style={{ float: 'center', paddingTop: '2%' }}>
-        <hr />
+        </span>
+        <div style={{ float: 'center', paddingTop: '2%' }}>
+          <hr/>
+        </div>
       </div>
     </div>
   );
