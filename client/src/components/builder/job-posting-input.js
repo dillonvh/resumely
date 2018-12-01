@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class JobPostingInput extends Component {
   render() {
     return (
-      <div id="JobPostingInput">
+      <div id="JobPostingInput" style={{ height:'25em' }}>
         <label>
           URL of Job Posting:
           <input type="text" />

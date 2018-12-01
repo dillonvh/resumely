@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
+const titleStyle = {
+  color: '#eac6ff',
+  fontFamily : 'Poppins',
+  fontSize: '1.9em',
+};
+
 class AboutInfo extends Component {
   render() {
     return (

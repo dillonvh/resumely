@@ -18,7 +18,7 @@ class Builder extends Component {
     this.updateElementsList = this.updateElementsList.bind(this);    
     
     this.screenComponents = [
-      <StartView start={this.switchScreen} />,
+      <StartView start={this.switchScreen}/>,
       <QuestionsContainer
         isQuestionnaire={false}
         scroll={this.scroll}
@@ -60,7 +60,11 @@ class Builder extends Component {
 
   render() {
     return (
-      <div id="Builder" style={{ paddingTop: '5%'}}>
+      <div id="Builder" style={{ paddingTop: '5%' }}>
+        <br />
+        <br />
+        <br />
+        <br />
         <div ref={el => (this.topDiv = el)} />
         {this.state.screenComponent}
       </div>

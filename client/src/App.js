@@ -10,6 +10,13 @@ const panelStyle = {
   'top': '10%',
 };
 
+const backgroundStyling = {
+  fontFamily: 'Montserrat', 
+  fontSize: '1.5em', 
+  color: '#a8e1f6',
+  backgroundColor: '#3924c1',
+}
+
 class App extends Component {
   constructor() {
     super();
@@ -38,10 +45,10 @@ class App extends Component {
       isAboutOpen: false,
     }));
   }
-
+  
   render() {
     return (
-      <div id="App">
+      <div id="App" style={backgroundStyling}>
         <Header
           toggleAbout={this.toggleAbout}
           toggleContact={this.toggleContact}
@@ -56,7 +63,7 @@ class App extends Component {
             : null
           }        
         </div>
-        <Builder />
+        <Builder/>
       </div>
     );
   }

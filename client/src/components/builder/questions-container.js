@@ -2,11 +2,26 @@ import React, { Component } from 'react';
 import Question from './question.js';
 import getQuestions from './get-questions.js';
 
-
 const itemStyle = {
-  fontSize: '2em',
+  fontSize: '1.5em',
   padding: '30%',
+
 };
+
+const buttonStyling = {
+  backgroundColor:'#a8e1f6', 
+  color: '#3924c1', 
+  borderStyle: 'none',
+  borderRadius: '10%',
+}
+
+const optionStyling = {
+  backgroundColor: '#3924c1',
+  color: '#a8e1f6',
+  borderStyle: 'none',
+  borderRadius: '10%',
+  margins: '5pt',
+}
 
 class QuestionsContainer extends Component {
   constructor(props) {
@@ -27,13 +42,13 @@ class QuestionsContainer extends Component {
     options.push(<div className="Option" key={0} style={itemStyle}>
         What is your seniority level?
         <br />
-        <select>
+        <select style={optionStyling}>
           <option value="associate">Associate</option>
           <option value="junior">Junior</option>
           <option value="senior">Senior</option>
         </select>
         <br />
-        <button onClick={() => this.props.scroll(0)}>
+        <button onClick={() => this.props.scroll(0)} style={buttonStyling}>
           Scroll
         </button>
       </div>
