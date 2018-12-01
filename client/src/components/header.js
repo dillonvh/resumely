@@ -15,7 +15,6 @@ const headerLinkStyle = {
 
 const Header = ({ toggleAbout, toggleContact }) => {
   return (
-    <div className="container">
       <div id="Header" style={headerStyle}>
         <span style={{ float: 'left', paddingLeft: '5%' }}>
         Resumely
@@ -30,7 +29,6 @@ const Header = ({ toggleAbout, toggleContact }) => {
           <hr/>
         </div>
       </div>
-    </div>
   );
 }
 
