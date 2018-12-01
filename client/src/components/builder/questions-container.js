@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Question from './question.js';
+import getQuestions from './get-questions.js';
+
 
 const itemStyle = {
   fontSize: '2em',
@@ -12,7 +14,7 @@ class QuestionsContainer extends Component {
 
     this.state = {
       items: this.props.isQuestionnaire
-        ? this.getQuestions()
+        ? getQuestions.bind(this)()
         : this.getOptions(),
     };
   }
