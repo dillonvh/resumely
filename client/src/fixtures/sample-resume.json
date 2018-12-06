@@ -1,11 +1,13 @@
 {
   "contact": {
+    "name": "Jane Doe",
     "phone": "(222) 222-2222",
     "email": "helloworld@samplesite",
     "linkedin": "linkedin.com/in/sampleuser",
     "portfolio": "github.com/sampleuser",
     "websites": [
-      "helloworld.ly"
+      "helloworld.ly",
+      "samplewebsite.io"
     ]
   },
   "education": {
@@ -17,19 +19,7 @@
         "endDate": "May 2019",
         "gpa": "3.5",
         "major": "Computer Science",
-        "minor": "Underwater Basket Weaving",
-        "activities": [
-          {
-            "name": "",
-            "position": {
-              "positionTitle": "Vice President",
-              "responsibilities": [
-                "Organize club meetings",
-                "Assume responsibilities of club president should the president die"
-              ]
-            }
-          }
-        ]
+        "minor": "Underwater Basket Weaving"
       },
       {
         "name": "City College",
@@ -38,16 +28,7 @@
         "endDate": "May 2017",
         "gpa": "3.3",
         "major": "Computer Science",
-        "minor": "None",
-        "activities": [
-          {
-            "name": "Club Penguin",
-            "position": {
-              "positionTitle": "member",
-              "responsibilities": []
-            }
-          }
-        ]
+        "minor": "None"
       }
     ],
     "coursework": [
@@ -57,7 +38,28 @@
       "Divination",
       "Gregorian Chanting"
     ]
-  }, // end education
+  },
+  "activities": [
+    {
+      "name": "Club Penguin",
+      "parentOrg": "Disney",
+      "position": {
+        "positionTitle": "member",
+        "responsibilities": []
+      }
+    },
+    {
+      "name": "",
+      "parentOrg": "Disney",      
+      "position": {
+        "positionTitle": "Vice President",
+        "responsibilities": [
+          "Organize club meetings",
+          "Assume responsibilities of club president should the president die"
+        ]
+      }
+    }
+  ],
   "awards": [
     {
       "name": "Muse Scholar",
@@ -71,11 +73,13 @@
     "libraries": ["Beautiful Soup", "Pandas"],
     "tools": ["Git", "PostGreSQL"],
     "platforms": ["Linux", "iOS"],
-    "other": ["", ""]
+    "other": []
   },
   "projects": [
     {
       "name": "Elevator Simulator",
+      "startDate": "June 2018",
+      "endDate": "November 2018",
       "numUsers": "400+",
       "description": [
         "ASCII art based simulation of being an elevator operator",
@@ -87,7 +91,8 @@
   "openSource": {
     "name": "isOdd",
     "numPulls": "3",
-    "description": ["popular NPM module"]
+    "project_description": "popular NPM module",
+    "description": ["Added data validation"]
   },
   "experience": [
     {

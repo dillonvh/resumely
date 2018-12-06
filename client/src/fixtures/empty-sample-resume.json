@@ -1,5 +1,6 @@
 {
   "contact": {
+    "name": "",    
     "phone": "",
     "email": "",
     "linkedin": "",
@@ -18,20 +19,21 @@
         "endDate": "",
         "gpa": "",
         "major": "",
-        "minor": "",
-        "activities": [
-          {
-            "name": "",
-            "position": {
-              "positionTitle": "",
-              "responsibilities": [ "", "", "" ]
-            }
-          }
-        ]
+        "minor": ""
       }
     ],
     "coursework": ["", ""]
-  }, // end education
+  },
+  "activities": [
+    {
+      "name": "",
+      "parentOrg": "",
+      "position": {
+        "positionTitle": "",
+        "responsibilities": [ "", "", "" ]
+      }
+    }
+  ],
   "awards": [
     {
       "name": "",
@@ -50,6 +52,8 @@
   "projects": [
     {
       "name": "",
+      "startDate": "June 2018",
+      "endDate": "November 2018",
       "numUsers": "",
       "description": [""]
     }
@@ -57,7 +61,8 @@
   "openSource": {
     "name": "",
     "numPulls": "",
-    "description": ["", ""]
+    "project_description": "",
+    "description": [""]
   },
   "experience": [
     {
