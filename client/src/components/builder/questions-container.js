@@ -3,8 +3,9 @@ import Question from './question.js';
 import getQuestions from './get-questions.js';
 
 const itemStyle = {
-  fontSize: '1.5em',
+  fontSize: '1em',
   padding: '30%',
+  outline: 'none'
 
 };
 
@@ -13,6 +14,7 @@ const buttonStyling = {
   color: '#3924c1', 
   borderStyle: 'none',
   borderRadius: '10%',
+  outline: 'none',
 }
 
 const optionStyling = {
@@ -21,6 +23,7 @@ const optionStyling = {
   borderStyle: 'none',
   borderRadius: '10%',
   margins: '5pt',
+  outline: 'none',
 }
 
 class QuestionsContainer extends Component {
@@ -56,14 +59,14 @@ class QuestionsContainer extends Component {
     options.push(<div className="Option" key={1} style={itemStyle}>
         What kind of job are you applying for?
         <br />
-        <select>
+        <select style={optionStyling}>
           <option value="engineering">Engineering</option>
           <option value="management">Management</option>
           <option value="UX">UX</option>
           <option value="design">Design</option>          
         </select>
         <br />
-        <button onClick={() => this.props.scroll(1)}>
+        <button onClick={() => this.props.scroll(1)} style={buttonStyling}>
           Scroll
         </button>
       </div>
@@ -80,6 +83,7 @@ class QuestionsContainer extends Component {
         <Question
           index={i}       
           itemStyle={itemStyle}
+          buttonStyling={buttonStyling}
           key={i}
           scroll={this.props.scroll}
         />

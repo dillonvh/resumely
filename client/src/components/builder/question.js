@@ -13,6 +13,6 @@ class Question extends Component {
       </div>
     );
   }
-}
+} 
 
 export default Question;

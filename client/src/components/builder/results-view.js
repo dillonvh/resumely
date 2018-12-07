@@ -22,7 +22,8 @@ class ResultsView extends Component {
     }));
   }
   render() {
-    return <div id="ResultsView">
+    return (
+      <div id="ResultsView" style={{ paddingBottom: '22.5em'}}>
         This is the results screen.
         <br />
         <button onClick={this.open}>

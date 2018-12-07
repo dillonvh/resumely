@@ -1,9 +1,27 @@
 import React from "react";
 
 const itemStyle = {
-  fontSize: "2em",
-  padding: "30%"
+  fontSize: '1em',
+  padding: '30%',
 };
+
+const inputStyle = {
+  backgroundColor: '#3924c1',
+  color: '#a8e1f6',
+  borderStyle: 'none none solid none',
+  borderColor: '#a8e1f6',
+  outline: 'none',
+  marginLeft: '5pt',
+}
+
+const buttonStyling = {
+  backgroundColor:'#a8e1f6', 
+  color: '#3924c1', 
+  borderStyle: 'none',
+  borderRadius: '10%',
+  outline: 'none',
+  marginTop: '5pt,'
+}
 
 function getQuestions() {
   let questions = [];
@@ -11,9 +29,9 @@ function getQuestions() {
     <div className="Question" key={0} style={itemStyle}>
       What is your name?
       <br />
-      <input type="text" />
+      <input autoFocus type="text" style={inputStyle}/>
       <br />
-      <button onClick={() => this.props.scroll(0)}>Scroll</button>
+      <button onClick={() => this.props.scroll(0)} style={buttonStyling}>Scroll</button>
     </div>
   );
   // user should be able to click to add or subtract fields
@@ -23,26 +41,26 @@ function getQuestions() {
       Contact Information:
       <br />
       <label>
-        Phone: <input type="text" />
+        Phone: <input type="text"  style={inputStyle}/>
       </label>
       <br />
       <label>
-        Email: <input type="text" />
+        Email: <input type="text"  style={inputStyle}/>
       </label>
       <br />
       <label>
-        LinkedIn: <input type="text" />
+        LinkedIn: <input type="text"  style={inputStyle}/>
       </label>
       <br />
       <label>
-        GitHub: <input type="text" />
+        GitHub: <input type="text"  style={inputStyle}/>
       </label>
       <br />
       <label>
-        Website: <input type="text" />
+        Website: <input type="text"  style={inputStyle}/>
       </label>
       <br />
-      <button onClick={() => this.props.scroll(1)}>Scroll</button>
+      <button onClick={() => this.props.scroll(1)} style={buttonStyling}>Scroll</button>
     </div>
   );
   // user should be able to add more college options
@@ -50,25 +68,26 @@ function getQuestions() {
     <div className="Question" key={2} style={itemStyle}>
       What college did you go to?
       <br />
-      <input type="text" />
+      <input type="text"  style={inputStyle}/>
+      <br />
       <br />
       <label>
-        GPA: <input type="text" />
+        GPA: <input type="text"  style={inputStyle}/>
       </label>
       <br />
       <label>
-        Graduation Date: <input type="text" />
+        Graduation Date: <input type="text"  style={inputStyle}/>
       </label>
       <br />
       <label>
-        Major: <input type="text" />
+        Major: <input type="text"  style={inputStyle}/>
       </label>
       <br />
       <label>
-        Minor: <input type="text" />
+        Minor: <input type="text"  style={inputStyle}/>
       </label>
       <br />
-      <button onClick={() => this.props.scroll(2)}>Scroll</button>
+      <button onClick={() => this.props.scroll(2)} style={buttonStyling}>Scroll</button>
     </div>
   );
     // user should be able to add more courses and subtract them
@@ -78,18 +97,18 @@ function getQuestions() {
         <br />
         <br />
         <label>
-          Course 1: <input type="text" />
+          Course 1: <input type="text"  style={inputStyle}/>
         </label>
         <br />
         <label>
-          Course 2: <input type="text" />
+          Course 2: <input type="text"  style={inputStyle}/>
         </label>
         <br />
         <label>
-          Course 3: <input type="text" />
+          Course 3: <input type="text"  style={inputStyle}/>
         </label>
         <br />
-        <button onClick={() => this.props.scroll(3)}>Scroll</button>
+        <button onClick={() => this.props.scroll(3)} style={buttonStyling}>Scroll</button>
       </div>
     );
     // user should be able to add more courses and subtract them
@@ -99,35 +118,35 @@ function getQuestions() {
         <br />
         <br />
         <label>
-          Course 1: <input type="text" />
+          Course 1: <input type="text"  style={inputStyle}/>
         </label>
         <br />
         <label>
-          Course 2: <input type="text" />
+          Course 2: <input type="text"  style={inputStyle}/>
         </label>
         <br />
         <label>
-          Course 3: <input type="text" />
+          Course 3: <input type="text"  style={inputStyle}/>
         </label>
         <br />
-        <button onClick={() => this.props.scroll(4)}>Scroll</button>
+        <button onClick={() => this.props.scroll(4)} style={buttonStyling}>Scroll</button>
       </div>
     );
     // user should be able to add more courses and subtract them
     questions.push(
       <div className="Question" key={5} style={itemStyle}>
         Being bilingual is highly marketable? Do you know any other languages?
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(5)}>Scroll</button>
+        <button onClick={() => this.props.scroll(5)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
       <div className="Question" key={6} style={itemStyle}>
         Were you in any clubs or societies?
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(6)}>Scroll</button>
+        <button onClick={() => this.props.scroll(6)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
@@ -138,13 +157,13 @@ function getQuestions() {
         <br />
         {//radio button yes/no for each
         }
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
         Great! What were your responsibilities?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(7)}>Scroll</button>
+        <button onClick={() => this.props.scroll(7)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
@@ -153,52 +172,52 @@ function getQuestions() {
         <br />
         What programming or markup languages do you know?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
         What frameworks and libraries are you familiar with?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
         What databases have you worked with?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
         What other tools have you worked with?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
         Finally, what platforms are you familiar with?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(8)}>Scroll</button>
+        <button onClick={() => this.props.scroll(8)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
       <div className="Question" key={9} style={itemStyle}>
         What awards have you won?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(9)}>Scroll</button>
+        <button onClick={() => this.props.scroll(9)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
       <div className="Question" key={10} style={itemStyle}>
         Have you contributed to any open source projects?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(10)}>Scroll</button>
+        <button onClick={() => this.props.scroll(10)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
       <div className="Question" key={11} style={itemStyle}>
         Now let's talk about your portfolio. What projects do you want to talk about?
         <br />
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(11)}>Scroll</button>
+        <button onClick={() => this.props.scroll(11)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
@@ -206,9 +225,9 @@ function getQuestions() {
         Here are the projects you said you wanted to talk about:
         <br />
         What was the project about?
-        <input type="text" />
+        <input type="text"  style={inputStyle}/>
         <br />
-        <button onClick={() => this.props.scroll(12)}>Scroll</button>
+        <button onClick={() => this.props.scroll(12)} style={buttonStyling}>Scroll</button>
       </div>
     );
     questions.push(
@@ -216,14 +235,14 @@ function getQuestions() {
         Where have you worked in the past?
         <br />
         <label>
-          Position Title: <input type="text" />
+          Position Title: <input type="text"  style={inputStyle}/>
         </label>
         <br />
         <label>
-          Responsibilities: <input type="text" />
+          Responsibilities: <input type="text"  style={inputStyle}/>
         </label>
         <br />
-        <button onClick={() => this.props.scroll(13)}>Scroll</button>
+        <button onClick={() => this.props.scroll(13)} style={buttonStyling}>Scroll</button>
       </div>
     );
   return questions;
