@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
 
 const inputStyle = {
-  backgroundColor: '#3924c1',
-  color: '#a8e1f6',
+  backgroundColor: '#0D0630',
+  color: '#E6F9AF',
   borderStyle: 'none none solid none',
-  borderColor: '#a8e1f6',
+  borderColor: '#E6F9AF',
   outline: 'none',
   marginLeft: '5pt',
 }
 
 const buttonStyling = {
-  backgroundColor:'#a8e1f6', 
-  color: '#3924c1', 
+  backgroundColor:'#E6F9AF', 
+  color: '#0D0630', 
   borderStyle: 'none',
   borderRadius: '10%',
   outline: 'none',
-  margin: '5pt'
+  margin: '5pt',
+  cursor: 'pointer',
 }
 
 class JobPostingInput extends Component {
   render() {
     return (
-      <div id="JobPostingInput" style={{ height:'25em' }}>
+      <div id="JobPostingInput" style={{ height:'50em' }}>
         <label>
           URL of Job Posting:
           <input autoFocus type="text" style={inputStyle}/>

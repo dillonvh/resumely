@@ -22,9 +22,11 @@ class Skills extends Component {
         <h3>Skills</h3>
         {arr.map((category, i) => (
           <div key={arrNames[i]}>
-            {arrNames[i]}
+            <b>
+              {arrNames[i]}: &emsp;
+            </b>
             {category.map((item, j) => (
-              <span key={`${item}`}>{j === 0 ? ` ${item}` : `, ${item}`}</span>
+              <span key={`${item}`} style={{ textIndent: '2em' }}>{j === 0 ? ` ${item}` : `, ${item}`}</span>
             ))}
             <br />
           </div>

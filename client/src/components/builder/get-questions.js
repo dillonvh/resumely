@@ -6,21 +6,22 @@ const itemStyle = {
 };
 
 const inputStyle = {
-  backgroundColor: '#3924c1',
-  color: '#a8e1f6',
+  backgroundColor: '#0D0630',
+  color: '#E6F9AF',
   borderStyle: 'none none solid none',
-  borderColor: '#a8e1f6',
+  borderColor: '#E6F9AF',
   outline: 'none',
   marginLeft: '5pt',
 }
 
 const buttonStyling = {
-  backgroundColor:'#a8e1f6', 
-  color: '#3924c1', 
+  backgroundColor:'#E6F9AF', 
+  color: '#0D0630', 
   borderStyle: 'none',
   borderRadius: '10%',
   outline: 'none',
-  marginTop: '5pt,'
+  marginTop: '5pt,',
+  cursor: 'pointer'
 }
 
 function getQuestions() {

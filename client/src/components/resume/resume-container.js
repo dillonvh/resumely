@@ -31,7 +31,7 @@ class ResumeContainer extends Component {
       <div id="resume-container">
         {this.isJunior
           ? <ResumeWindow onClose={this.props.onClose}>
-              <Contact json={this.props.json.contact} />
+              <Contact json={this.props.json.contact}/>
               <Education json={this.props.json.education} />
               <Skills json={this.props.json.skills} />
               <Experience json={this.props.json.experience} />

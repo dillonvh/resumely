@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 const titleStyle = {
-  color: '#eac6ff',
+  color: '#8BBEB2',
   fontFamily : 'Poppins',
   fontSize: '1.9em',
 };

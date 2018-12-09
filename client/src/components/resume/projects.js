@@ -8,9 +8,11 @@ class Projects extends Component {
         <h3>Projects</h3>
         {projects.map(project => (
           <div key={project.name}>
-            {project.name}
-            {project.startDate}
-            {project.endDate}
+            <span>{project.name}</span>
+            <span style={{ float: 'right' }}>
+              {project.startDate} - 
+              {project.endDate}
+            </span>
             <ul>
               {project.numUsers
                 ? <li>Has {project.numUsers} users</li>
