@@ -60,7 +60,7 @@ class Builder extends Component {
 
   render() {
     return (
-      <div id="Builder" style={{ paddingTop: '5%' }}>
+      <div id="Builder" style={{ paddingTop: '5%', fontSize: '1.5rem'}}>
         <br />
         <br />
         <br />

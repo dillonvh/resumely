@@ -8,13 +8,17 @@ class Experience extends Component {
         <h3>Experience</h3>
         {experiences.map(exp => (
           <div key={exp.company}>
-            {exp.company}
-            {exp.location}
+            <span>{exp.company}</span>
+            <span style={{ float: 'right' }}>{exp.location}</span>
             {exp.positions.map(position => (
               <div key={position.positionTitle}>
-                {position.positionTitle}
-                {position.startDate}
-                {position.endDate}
+                <span>
+                  <b>{position.positionTitle}</b>
+                </span>
+                <span style={{ float: 'right' }}>
+                  {position.startDate} - 
+                  {position.endDate}
+                </span>
                 <ul>
                   {position.responsibilities.map((item, index) => (
                     <li key={`${exp.positionTitle}bullet${index}`}>

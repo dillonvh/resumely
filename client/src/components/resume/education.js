@@ -12,14 +12,30 @@ class Education extends Component {
         <h3>Education</h3>
         {json.schools.map(school => (
           <div key={school.name}>
-            {school.name}
-            {school.location}
-            {json.schools.length > 1 ? school.startDate : null}
-            {this.isFuture(school.endDate) ? "Expected: " : null}
-            {school.endDate}
-            {school.gpa}
-            {school.major}
-            {school.minor}
+            <span>
+              <b>
+                {school.name}
+              </b>
+            </span>
+            <span style={{ float: 'right' }}>
+              {school.location}
+            </span>
+            <br />
+            <span>
+              Bachelor of Science, &nbsp;
+              {/* TODO: add type of degree (B.A., B.S., M.A., PhD) */}
+              {school.major}, &nbsp;
+              {school.minor}, &nbsp;
+              <b>
+                GPA: &nbsp;
+                {school.gpa}
+              </b>
+            </span>
+            <span style={{ float: 'right'}}>
+              {json.schools.length > 1 ? school.startDate : null} -
+              {this.isFuture(school.endDate) ? "Expected: " : null}
+              {school.endDate}  
+            </span>
           </div>
         ))}
       </div>

@@ -2,52 +2,42 @@ import React from 'react';
 
 
 const headerStyle = {
-  background: '#430866',
-  paddingTop: '1%',
+  color: '#8BBEB2',
+  background: '#384E77',
+  padding: '1% 2% 1% 2%',
   position: 'fixed',
   width: '100%',
 };
 
 const headerLinkStyle = {
-  color: '#eac6ff',
+  margin: '0.5%',
   fontFamily : 'Poppins',
-  fontSize: '1.5em',
+  fontSize: '1.5rem',
   cursor: 'pointer',
   float: 'right',
-  paddingRight: '5%',
-  background: '#430866', 
-  paddingTop: '1.0%',
+  background: '#384E77', 
 };
 
 const titleStyle = {
-  color: '#eac6ff',
+  color: '#8BBEB2',
   fontFamily : 'Fugaz One',
   float: 'left',
-  paddingLeft: '5%', 
-  fontSize: '2.2em',
-  background: '#430866', 
+  fontSize: '2.2rem',
+  background: '#384E77', 
 };
-
-const header = {
-  background: "blue",
-}
 
 const Header = ({ toggleAbout, toggleContact }) => {
   return (
-    <div className="page-header" style={header}>
-      <div style={headerStyle}>
-        <span style={titleStyle}>
-        Resumly
-        </span>
-        <span onClick={toggleAbout} style={headerLinkStyle}>
-        About
-        </span>
-        <span onClick={toggleContact} style={headerLinkStyle}>
-        Contact
-        </span>
-          <div style={{ float: 'center', paddingTop: '2%' }}>
-          </div>
-      </div>
+    <div className="page-header" style={headerStyle}>
+      <span style={titleStyle}>
+      Resumly
+      </span>
+      <span onClick={toggleAbout} style={headerLinkStyle}>
+      About
+      </span>
+      <span onClick={toggleContact} style={headerLinkStyle}>
+      Contact
+      </span>
     </div> 
   );
 }

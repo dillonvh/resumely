@@ -12,9 +12,9 @@ const panelStyle = {
 
 const backgroundStyling = {
   fontFamily: 'Montserrat', 
-  fontSize: '1.5em', 
-  color: '#a8e1f6',
-  backgroundColor: '#3924c1',
+  fontSize: '1.5rem', 
+  color: '#E6F9AF',
+  backgroundColor: '#0D0630',
 }
 
 class App extends Component {

@@ -3,23 +3,24 @@ import Question from './question.js';
 import getQuestions from './get-questions.js';
 
 const itemStyle = {
-  fontSize: '1em',
+  fontSize: '1.5rem',
   padding: '30%',
   outline: 'none'
 
 };
 
 const buttonStyling = {
-  backgroundColor:'#a8e1f6', 
-  color: '#3924c1', 
+  backgroundColor:'#E6F9AF', 
+  color: '#0D0630', 
   borderStyle: 'none',
   borderRadius: '10%',
   outline: 'none',
+  cursor: 'pointer',
 }
 
 const optionStyling = {
-  backgroundColor: '#3924c1',
-  color: '#a8e1f6',
+  backgroundColor: '#0D0630',
+  color: '#E6F9AF',
   borderStyle: 'none',
   borderRadius: '10%',
   margins: '5pt',
