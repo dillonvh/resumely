@@ -20,9 +20,9 @@
 
     - Questionnaire samples:
 
-    ![Questionnaire Design Sample 1 Ver 1.0.0](/designs/Ver1.0.0/SeniorityVer1.0.0)
+    ![Questionnaire Design Sample 1 Ver 1.0.0](/designs/Ver1.0.0/SeniorityVer1.0.0.png)
 
-    ![Questionnaire Design Sample 2 Ver 1.0.0](/designs/Ver1.0.0/JobPostingVer1.0.0)
+    ![Questionnaire Design Sample 2 Ver 1.0.0](/designs/Ver1.0.0/JobPostingVer1.0.0.png)
 
     - Sample resume formatting:
 
