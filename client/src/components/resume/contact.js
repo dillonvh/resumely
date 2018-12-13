@@ -10,7 +10,7 @@ class Contact extends Component {
     let json = this.props.json;
     return (
       <div id="resume-contact" style={fontStyling}>
-        <h1 style={{marginBlockEnd: '0em'}}> {json.name} </h1>
+        <h1 style={{marginBlockEnd: '0%'}}> {json.name} </h1>
         {json.phone} | 
         <a href={"mailto:"+json.mail}>
           {json.email}</a> | 

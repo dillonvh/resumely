@@ -12,7 +12,7 @@ const headerStyle = {
 const headerLinkStyle = {
   margin: '0.5%',
   fontFamily : 'Poppins',
-  fontSize: '1.5em',
+  fontSize: '1.5rem',
   cursor: 'pointer',
   float: 'right',
   background: '#384E77', 
@@ -22,7 +22,7 @@ const titleStyle = {
   color: '#8BBEB2',
   fontFamily : 'Fugaz One',
   float: 'left',
-  fontSize: '2.2em',
+  fontSize: '2.2rem',
   background: '#384E77', 
 };
 

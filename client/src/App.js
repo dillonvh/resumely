@@ -12,7 +12,7 @@ const panelStyle = {
 
 const backgroundStyling = {
   fontFamily: 'Montserrat', 
-  fontSize: '1.5em', 
+  fontSize: '1.5rem', 
   color: '#E6F9AF',
   backgroundColor: '#0D0630',
 }

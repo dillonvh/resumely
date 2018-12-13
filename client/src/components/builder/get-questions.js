@@ -1,7 +1,7 @@
 import React from "react";
 
 const itemStyle = {
-  fontSize: '1em',
+  fontSize: '1.5rem',
   padding: '30%',
 };
 

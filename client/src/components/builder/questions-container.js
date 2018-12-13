@@ -3,7 +3,7 @@ import Question from './question.js';
 import getQuestions from './get-questions.js';
 
 const itemStyle = {
-  fontSize: '1.5em',
+  fontSize: '1.5rem',
   padding: '30%',
   outline: 'none'
 

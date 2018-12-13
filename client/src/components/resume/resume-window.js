@@ -15,7 +15,7 @@ class ResumeContainer extends Component {
   }
   setStyle() {
     this.containerEl.style.fontFamily = "sans-serif";
-    this.containerEl.style.fontSize = "1.2em";
+    this.containerEl.style.fontSize = "1.2rem";
     this.containerEl.style.margin= "2% 10% 2% 10%";
   }
   render() {

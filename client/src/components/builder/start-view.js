@@ -9,7 +9,7 @@ const buttonStyling = {
 }
 const StartView = ({ start }) => {
   return (
-    <div id="StartView" style={{paddingBottom: '51em'}}>
+    <div id="StartView" style={{paddingBottom: '40rem'}}>
       This is the start screen.
       <br />
       Click to start the questionnaire:

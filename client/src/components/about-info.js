@@ -4,7 +4,7 @@ import { Modal, Button } from 'react-bootstrap';
 const titleStyle = {
   color: '#8BBEB2',
   fontFamily : 'Poppins',
-  fontSize: '1.9em',
+  fontSize: '1.5rem',
 };
 
 class AboutInfo extends Component {

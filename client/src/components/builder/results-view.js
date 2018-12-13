@@ -32,7 +32,7 @@ class ResultsView extends Component {
   }
   render() {
     return (
-      <div id="ResultsView" style={{ height: '40em' }}>
+      <div id="ResultsView" style={{ height: '40rem' }}>
         This is the results screen.
         <br />
         <button onClick={this.open} style={buttonStyling}>

@@ -22,7 +22,7 @@ const buttonStyling = {
 class JobPostingInput extends Component {
   render() {
     return (
-      <div id="JobPostingInput" style={{ height:'50em' }}>
+      <div id="JobPostingInput" style={{ height:'40rem' }}>
         <label>
           URL of Job Posting:
           <input autoFocus type="text" style={inputStyle}/>
