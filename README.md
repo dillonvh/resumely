@@ -17,7 +17,7 @@ Written in React 16.5 and Node 8.11.
 
 To access the demo, clone this repository and run:
 ```
-$yarn install
-$cd client
-$yarn start
+$ yarn install
+$ cd client
+$ yarn start
 ```
